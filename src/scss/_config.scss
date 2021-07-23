@@ -1,0 +1,134 @@
+/* _config */
+// color
+$primary-color: #e94134;
+$secondary-color: #848484;
+$font-color: #c5c2c2;
+$light-color: #d8d8d8;
+$dark-color: #0e0d0d;
+$darken: #333;
+
+// fonts-family
+// CHEWY,
+$prime-family: "Permanent Marker", sans-serif; // prime title fonts
+$list-family: "Noto Sans SC", sans-serif; // btn/list fonts
+$text-family: "Montserrat", sans-serif; // text
+
+$line-ht-l: 1.4em; // 768px - ~
+$line-ht-sm: 1.2em; // 320px - 768px
+
+// font-size
+// $font-size-l: 20px; // 1280px - ~
+$font-size-m: 16px; // 480px - 1280px
+$font-size-sm: 15px; // 320px - 480px
+
+// scrollbar
+*::-webkit-scrollbar {
+  width: .6rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: $font-color;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $secondary-color;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: darken($secondary-color, 10);
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: darken($secondary-color, 20);
+}
+
+/* default styles */
+
+:root {
+  font-size: $font-size-m;
+  font-family: $text-family;
+  color: $font-color;
+}
+
+body {
+  user-select: none;
+}
+
+.container {
+  // min-height: calc(100vh - 3rem);
+  display: block;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100%;
+  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 3rem 0.5rem 1.5rem;
+  overflow: hidden;
+  line-height: $line-ht-l;
+}
+
+* {
+  // mobile touch border btn
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  line-height: 1em;
+}
+a:hover,
+a:focus {
+  color: inherit;
+}
+
+// input,
+// textarea {
+//   font-family: $text-family;
+//   font-size: 1rem;
+//   color: $font-color;
+//   background-color: $light-color;
+//   outline: none;
+// }
+
+// textarea {
+//   padding-left: 1em;
+//   padding-top: 1em;
+//   resize: none;
+// }
+
+// ---heading---
+.ht1,
+.ht2,
+.ht3 {
+  font-family: $prime-family;
+  font-weight: 600;
+  line-height: 1em;
+  color: $dark-color;
+}
+
+.ht1 {
+  font-size: 5rem;
+  margin-bottom: 0.3em;
+}
+
+.ht2,
+.ht3 {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+  // text-transform: capitalize;
+}
+
+.ht3 {
+  font-size: 1.1rem;
+}
+
+// media-queries
+@media screen and (max-width: 480px) {
+  :root {
+    font-size: $font-size-sm;
+    line-height: $line-ht-sm;
+  }
+}

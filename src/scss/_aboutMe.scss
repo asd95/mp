@@ -1,0 +1,127 @@
+.about-me {
+  position: relative;
+  // box-sizing: border-box;
+  background: url(../img/cyberpunkc.jpg) no-repeat center center fixed;
+  background-size: cover;
+  z-index: 1;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.85;
+    z-index: -1;
+  }
+
+  .about-me__container {
+    display: flex;
+    align-items: center;
+  }
+
+  .i-am {
+    flex: 1;
+
+    .who {
+      position: relative;
+      font-family: $prime-family;
+      font-size: 3rem;
+      color: $primary-color;
+      z-index: 1;
+    }
+    .dev {
+      position: absolute;
+      left: 5rem;
+      top: 2rem;
+      font-size: 5rem;
+      color: $darken;
+      opacity: 0.5;
+      z-index: -1;
+      transform: rotate(-3deg);
+    }
+
+    .my-desc {
+      position: relative;
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+      line-height: 1.3em;
+      word-spacing: 2px;
+      z-index: 1;
+    }
+  }
+
+  .interesting-inform {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: $primary-color;
+    z-index: 1;
+
+    .features {
+      margin-left: 1.5rem;
+    }
+
+    .features__item {
+      position: relative;
+      margin: 1.5rem 0;
+    }
+
+    .font-marker {
+      font-family: $prime-family;
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+
+    .i-am {
+      .who {
+        font-size: 2.8rem;
+      }
+      .dev {
+        font-size: 4.8rem;
+      }
+    }
+    .interesting-inform {
+      .features {
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-me__container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+
+    .i-am {
+      .who {
+        font-size: 2.4rem;
+      }
+      .dev {
+        font-size: 3rem;
+        left: 1rem;
+      }
+      .my-desc {
+        text-align: center;
+        font-size: 1.05rem;
+      }
+    }
+
+      .interesting-inform {
+        text-align: center;
+        font-size: 1.1rem;
+        .features__item {
+          margin: 1.2rem 0;
+        }
+      }
+  }
+}

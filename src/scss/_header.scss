@@ -1,0 +1,158 @@
+.header {
+  width: 100%;
+  position: fixed;
+  padding: 0.3em 1em;
+  z-index: 11;
+  background-color: rgba(22, 21, 23, 0.9);
+  background-color: $dark-color;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    width: 35px;
+    height: 35px;
+    img {
+      width: 100%;
+      height: 100%;
+      
+    }
+  }
+
+  
+}
+
+.navbar-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.navbar-nav__item {
+  position: relative;
+  display: flex;
+  margin: 0 0.7rem;
+}
+
+.item-link {
+  text-transform: uppercase;
+  font-family: "Gloria Hallelujah", sans-serif;
+  background: #eee;
+  color: #0e0d0d;
+  padding: 0.1rem;
+}
+
+.item-link:hover {
+  color: #fed104;
+  background: #000;
+}
+
+.social-media {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media_item {
+  margin-left: 0.5rem;
+}
+
+.social-media_item a {
+  display: block;
+  padding: 0.3em;
+  border-radius: 3px;
+}
+
+.social-media_item a:hover {
+  background: #fed104;
+  color: #2e2833;
+}
+
+.social-media_item i {
+  font-size: 1.1rem;
+}
+
+.active-social {
+  display: none;
+}
+
+.wrapper-menu {
+  display: none;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 330ms ease-out;
+}
+
+.wrapper-menu.open {
+  transform: rotate(-45deg);
+}
+
+.line-menu {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  height: 4px;
+}
+
+.line-menu.half {
+  width: 50%;
+}
+
+.line-menu.start {
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: right;
+}
+
+.open .line-menu.start {
+  transform: rotate(-90deg) translateX(3px);
+}
+
+.line-menu.end {
+  align-self: flex-end;
+  transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+  transform-origin: left;
+}
+
+.open .line-menu.end {
+  transform: rotate(-90deg) translateX(-3px);
+}
+
+/* MENU for mobile */
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #333;
+  z-index: 20;
+  min-width: 320px;
+  width: 25%;
+  height: 50%;
+  min-height: 250px;
+  overflow: visible;
+}
+
+.navbar-mobile {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-nav {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem;
+}
